@@ -5,20 +5,20 @@
 	<title>Lección 13</title>
 </head>
 <body style = "text-align: left;">
-	<form action="">
-		<table border="1">
-		<tr>
-			<td>&nbsp;Fahrenheit&nbsp;</td>
-			<td><input type="number" id= "textFahrenheit" step="0.01"></td>
-			<td><button type="button" onclick="convertirCelcius();return false">Convert to Celcius</button></td>
-		</tr>
-		<tr>
-			<td>&nbsp;Celcius&nbsp;</td>
-			<td><input type="number" id = "textCelcius" step="0.01"></td>
-			<td><button type="button" onclick="convertirFahrenheit();return false">Convert to Fahrenheit</button></td>
-		</tr>
-	</table>	
-	</form>	
-	<script src = "assets\js\javascript.js"></script>
+	<h1><b>Ingrese Datos</b></h1>
+	<form onsubmit="return false;">
+		<label for="nombre"> Ingresa tu Nombre: </label>
+		<input type="text" id ="textNombre" pattern="[a-zA-Z]{2,48}[/s/?]{0,1}" title="Nombre Invalido" required><br><br>
+		<label for="apellido">Ingresa tu Apellido:</label>
+		<input type="text" id = "textApellidos" pattern="[a-zA-Z]{2,48}" title="Apellido Invalido"required><br><br>
+		<label for="dni">Ingresa tu DNI:</label>
+		<input type="text" id = "textDNI" maxlength="8" pattern="[0-9]{8}" required><br><br>	
+		<label for="direccion">Ingresa tu Dirección:</label>
+		<input type="text" id = "textDireccion" required><br><br>
+		<button type="submit"  id="mostrarDatos"> Enviar Datos</button>	
+		<div id = "result"></div>
+	</form>
+	<div id = "result"></div>
+	<script src = "assets\js\form.js"></script>
 </body>
 </html>
